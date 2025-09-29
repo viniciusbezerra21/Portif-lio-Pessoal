@@ -1,0 +1,176 @@
+:root {
+    --cor-fundo-: linear-gradient(180deg,
+            #000000 0%,
+            #313131 15%,
+            #313131 25%,
+            #090909 100%);
+    
+
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--cor-fundo-);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+}
+
+nav .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav .title {
+    display: flex;
+    font-size: 28px;
+    font-weight: bold;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+nav .buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+nav .buttons .btnContato {
+    width: 130px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #000000;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.hero-section .container {
+    margin-top: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    width: 660px;
+    height: 270px;
+}   
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero .hero-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero .hero-subtitle {
+    font-size: 16px;
+    text-align: center;
+}
+
+.hero .hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero .hero-buttons .btnVerMais {
+    width: 130px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.hero .hero-buttons .btnSobre {
+    width: 130px;
+    height: 50px;
+    color: #ffffff;
+    background-color: var(--cor-fundo-);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.hero .hero-buttons .btnVerMais:hover {
+    background-color: var(--cor-fundo-);
+    color: #fff;
+    transition: all 0.3s ease;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.hero .hero-buttons .btnSobre:hover {
+    background-color: #fff;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.container-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1370px;
+    height: 600px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-image: url(../assets/Imagem_de_computador.png);
+    background-size: cover;
+}
+
+
