@@ -23,12 +23,18 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    padding-top: 80px;
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #000;
+    z-index: 1000;
     color: #fff;
 }
 
@@ -51,7 +57,7 @@ nav ul {
     list-style: none;
     gap: 20px;
     align-items: center;
-    margin-right: 50px;
+    margin-right: 60px;
 }
 
 nav ul li a {
