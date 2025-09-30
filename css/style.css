@@ -179,4 +179,102 @@ nav .buttons .btnContato {
     background-size: cover;
 }
 
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-bottom: 50px;
+}
 
+.habilidades .container-introdução {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: auto;
+    width: 680px;
+    height: 270px;
+    padding: 30px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.habilidades .container-introdução .title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.habilidades .container-introdução .subtitle {
+    font-size: 16px;
+    text-align: left;
+}
+
+.container-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    flex-direction: row;
+}
+
+.card{
+    width: 445px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    color: #000;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.card-image{
+    width: 60px;
+    height: 60px;
+}
+
+.card-title{
+    font-size: 24px;
+    font-weight: bold;
+}
+.card-subtitle{
+    font-size: 16px;
+    text-align: left;
+    font-weight: 900;
+}
+
+.card-image.front-end{
+    background-image: url(../assets/front-end.svg);
+    background-size: cover;
+}
+.card-image.back-end{
+    background-image: url(../assets/back-end.png);
+    background-size: cover;
+}
+.card-image.java{
+    background-image: url(../assets/java.svg);
+    background-size: cover;
+}
+.front-end-card{
+    background: linear-gradient(180deg, #551C57, #B03B95, #EA78B4, #F882A4 );
+}
+
+
+.back-end-card{
+    background: linear-gradient(180deg, #B74084, #FC8D93, #F17284);
+}
+
+.java-card{
+   background: linear-gradient(180deg, #DF693B, #DD69B5, #FC938E);
+}
