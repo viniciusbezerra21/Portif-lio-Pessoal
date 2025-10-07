@@ -4,7 +4,7 @@
             #313131 15%,
             #313131 25%,
             #090909 100%);
-    
+
 
 
 }
@@ -24,6 +24,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     padding-top: 80px;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -85,6 +86,110 @@ nav .buttons .btnContato {
     font-size: 18px;
 }
 
+nav .buttons .btnContato:hover {
+    background-color: #fff;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.btns-contato{
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #187cda;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .modal-content iframe {
+    width: 100%;
+    height: 100%;
+    animation: aparecerBotao 1.5s ease forwards;
+  }
+  
+  #fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.scroll-reveal.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-animado {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecerBotao 1.5s ease forwards;
+}
+
+@keyframes aparecerBotao {
+    0% {
+        opacity: 0;
+        transform: translateY(80px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Animação base para todos os textos */
+.texto-animado {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+}
+
 .hero-section {
     display: flex;
     align-items: center;
@@ -103,7 +208,7 @@ nav .buttons .btnContato {
     gap: 20px;
     width: 660px;
     height: 270px;
-}   
+}
 
 .hero {
     display: flex;
@@ -167,7 +272,7 @@ nav .buttons .btnContato {
     transition: all 0.3s ease;
 }
 
-.container-img{
+.container-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,7 +325,7 @@ nav .buttons .btnContato {
     flex-direction: row;
 }
 
-.card{
+.card {
     width: 445px;
     height: 360px;
     display: flex;
@@ -233,50 +338,54 @@ nav .buttons .btnContato {
     color: #000;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
     transition: all 0.6s ease;
     cursor: pointer;
 }
 
-.card-image{
+.card-image {
     width: 60px;
     height: 60px;
 }
 
-.card-title{
+.card-title {
     font-size: 24px;
     font-weight: bold;
 }
-.card-subtitle{
+
+.card-subtitle {
     font-size: 16px;
     text-align: left;
     font-weight: 900;
 }
 
-.card-image.front-end{
+.card-image.front-end {
     background-image: url(../assets/front-end.svg);
     background-size: cover;
 }
-.card-image.back-end{
+
+.card-image.back-end {
     background-image: url(../assets/back-end.png);
     background-size: cover;
 }
-.card-image.java{
+
+.card-image.java {
     background-image: url(../assets/java.svg);
     background-size: cover;
 }
-.front-end-card{
-    background: linear-gradient(180deg, #551C57, #B03B95, #EA78B4, #F882A4 );
+
+.front-end-card {
+    background: linear-gradient(180deg, #551C57, #B03B95, #EA78B4, #F882A4);
 }
 
 
-.back-end-card{
+.back-end-card {
     background: linear-gradient(180deg, #B74084, #FC8D93, #F17284);
 }
 
-.java-card{
-   background: linear-gradient(180deg, #DF693B, #DD69B5, #FC938E);
+.java-card {
+    background: linear-gradient(180deg, #DF693B, #DD69B5, #FC938E);
 }
 
 .meus-projetos {
@@ -306,6 +415,7 @@ nav .buttons .btnContato {
     flex-wrap: wrap;
     padding: 30px;
 }
+
 .card-projeto {
     width: 370px;
     height: 270px;
@@ -314,40 +424,21 @@ nav .buttons .btnContato {
     cursor: pointer;
 }
 
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
+.card-projeto:hover {
+    transform: scale(1.05);
+    transition: all 0.6s ease;
+    width: 370px;
+    height: 270px;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-footer p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-footer .social-media {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    margin-right: 60px;
-}
-
-footer .social-media a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-footer .social-media a:hover {
-    opacity: 0.7;
-    transition: all 0.3s ease;
+.card-projeto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .sobre {
@@ -390,13 +481,15 @@ footer .social-media a:hover {
     height: auto;
 }
 
-.habilidades-front-end{
+.habilidades-front-end {
     display: flex;
     flex-direction: row;
     color: #fff;
     margin-bottom: 50px;
     padding: 50px;
     margin-left: 60px;
+    align-items: center;
+    justify-content: center;
 }
 
 .wraper-habilidades-front-end {
@@ -406,7 +499,7 @@ footer .social-media a:hover {
     gap: 120px;
     margin-top: 10px;
     flex-direction: row-reverse;
-
+    
 }
 
 .wraper-habilidades-front-end .imagem-front-end {
@@ -439,23 +532,25 @@ footer .social-media a:hover {
     border-radius: 5px;
 }
 
-.habilidades-back-end{
+.habilidades-back-end {
     display: flex;
     flex-direction: row;
     color: #fff;
     margin-bottom: 50px;
     padding: 50px;
     margin-left: 60px;
+    align-items: center;
+    justify-content: center;
 }
 
-.wraper-habilidades-back-end{
+.wraper-habilidades-back-end {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 120px;
     margin-top: 10px;
     flex-direction: row;
-
+    
 }
 
 .wraper-habilidades-back-end .imagem-back-end {
@@ -486,4 +581,220 @@ footer .social-media a:hover {
     cursor: pointer;
     font-size: 18px;
     border-radius: 5px;
+}
+
+.modal-certificados {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.container-certificados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    max-width: 800px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    animation: aparecerModal 0.5s ease forwards;
+}
+
+.container-botoes-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.container-botoes-modal .btnLinkedin {
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #187cda;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+.container-botoes-modal .btnCurriculo {
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer .social-media {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 60px;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer .social-media a:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+/* ----- MODAL GERAL ----- */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    width: 90%;
+    max-width: 1200px;
+    height: 85vh;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    position: relative;
+    animation: aparecerModal 0.4s ease forwards;
+  }
+  
+  #fechar-modal {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease;
+  }
+  
+  #fechar-modal:hover {
+    transform: scale(1.2);
+  }
+  
+  /* iframe ocupa tudo, com rolagem própria */
+  #iframe-modal {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: auto;
+  }
+  
+  /* animação simples */
+  @keyframes aparecerModal {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  /* evita rolagem do body quando modal está aberto */
+  body.modal-aberto {
+    overflow: hidden;
+  }
+  
+
+.modal-contato {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.container-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    max-width: 800px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    animation: aparecerModal 0.5s ease forwards;
+}
+.telefone{
+    border-color: rgb(33, 150, 243);
+}
+
+.whatsapp{
+    border-color: rgb(68, 245, 76);
+}
+
+.email{
+    border-color: rgb(245, 68, 68);
 }
